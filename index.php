@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <head>
     <title>tugas2</title>
+    <style>
+        body {
+            margin : 0 350px 0 350px;
+            background-color: #dedede;
+        }
+        input {
+             display: block;
+             margin : 0 auto;
+             border-radius : 10px;
+             width: 100%;
+             height : 27px;
+             text-align : center;
+             background-color: #f7f7f7;
+        }
+        h1 {
+            text-align : center;
+            margin-bottom : 30px;
+        }
+        h2 {
+            text-align : center;
+            margin-bottom : 35px;
+        }
+        label {
+            text-align : center;
+            font-size : 20px;
+            display: block;
+            margin : 0 auto;
+            margin-bottom : -10px;
+        }
+    </style>
 </head>
 <body>
     <h1>BIODATA</h1>

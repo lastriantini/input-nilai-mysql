@@ -5,7 +5,6 @@
 </head>
 <body>
 <form method="post" action="index.php">
-    
 <?php
 
 $server = mysqli_connect("localhost", "root", "", "latihan_xpplg");
@@ -51,10 +50,10 @@ $rayon = $_POST ['rayon'];
 echo "Rayon : <b>$rayon</b>";
 echo "<br> <br>";
 
-$sql ="insert into profil (nis, nama, alamat, tanggallahir, umur, sekolah, rombel, rayon)
+$sqlprofil ="INSERT INTO profil (nis, nama, alamat, tanggallahir, umur, sekolah, rombel, rayon)
 values('$nis', '$nama', '$alamat', '$ttl', '$umur', '$sekolah', '$rombel', '$rayon')";
 
-if (mysqli_query($server, $sql)) {
+if (mysqli_query($server, $sqlprofil)) {
   echo "berhasil!!! <br> <br>";
 } else {
   echo "gagla";
@@ -82,6 +81,15 @@ echo "<br> <br>";
 $nd = $_POST ['nd'];
 echo "Nilai Sunda : $nd";
 echo "<br> <br>";
+
+$sqlnilai ="INSERT INTO `nilai` (`Nilai Produktif`, `Nilai Matematika`, `Nilai Indonesia`, `Nilai Pipas`, `Nilai Sunda`)
+values('$np', '$nm', '$ni', '$ns', '$nd')";
+
+if (mysqli_query($server, $sqlnilai)) {
+  echo "berhasil!!! <br> <br>";
+} else {
+  echo "gagla";
+}
 
 $np = $_POST ['np'];
 $nm = $_POST ['nm'];
