@@ -4,7 +4,7 @@
     <title>Document</title>
 </head>
 <body>
-<form method="post" action="index.php">
+<form method="post" action="tampil2.php">
 <?php
 
 $server = mysqli_connect("localhost", "root", "", "latihan_xpplg");
@@ -141,7 +141,11 @@ echo "<br> <br>";
 
 echo "Rainy Nur Baeti Putri";
 echo "<br> <br>";
+
+echo "Najwan Hisyam";
+echo "<br> <br>";
 ?>
     <input type="submit" value="kembali">
+    <input type="submit" value="tampilkan data">
 </body>
 </html>
