@@ -3,7 +3,7 @@
     <title>tugas2</title>
     <style>
         body {
-            margin : 0 350px 0 350px;
+            margin : 0 400px 0 400px;
             background-color: #dedede;
         }
         input {

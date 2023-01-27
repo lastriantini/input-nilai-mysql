@@ -2,15 +2,33 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+        font-size: 17px;
+      }
+      input {
+        display: block;
+        margin-top: 30px;
+        margin-bottom:30px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 35px;
+        width: 350px;
+        background-color:  #678983;
+        border-radius: 50px;
+      }
+    </style>
 </head>
 <body>
-<form method="post" action="tampil2.php">
+<form method="post" action="datasiswa.php">
+<form method="post" action="datanilai.php">
 <?php
 
 $server = mysqli_connect("localhost", "root", "", "latihan_xpplg");
 
 if ($server) {
-   echo "berhasil hore! <br>";
+   echo " <br>";
 } else {
    echo "gagal:(";
 }
@@ -54,7 +72,7 @@ $sqlprofil ="INSERT INTO profil (nis, nama, alamat, tanggallahir, umur, sekolah,
 values('$nis', '$nama', '$alamat', '$ttl', '$umur', '$sekolah', '$rombel', '$rayon')";
 
 if (mysqli_query($server, $sqlprofil)) {
-  echo "berhasil!!! <br> <br>";
+  echo "<br>";
 } else {
   echo "gagla";
 }
@@ -82,7 +100,7 @@ $nd = $_POST ['nd'];
 echo "Nilai Sunda : $nd";
 echo "<br> <br>";
 
-$sqlnilai ="INSERT INTO `nilai` (`Nilai Produktif`, `Nilai Matematika`, `Nilai Indonesia`, `Nilai Pipas`, `Nilai Sunda`)
+$sqlnilai ="INSERT INTO `nilai` (`produktif`, `matematika`, `indonesia`, `pipas`, `sunda`)
 values('$np', '$nm', '$ni', '$ns', '$nd')";
 
 if (mysqli_query($server, $sqlnilai)) {
@@ -100,7 +118,7 @@ $ni = $_POST ['nd'];
 $sum = $np + $ni + $nm + $ns + $nd;
 $mean = $sum/5;
 echo "<b>rata rata nilai : $mean";
-echo "<br> <br>";
+echo "</b><br> <br>";
 
 echo "<b>nilai max : ";
 echo max ($np, $nm, $ni, $ns, $nd);
@@ -145,7 +163,8 @@ echo "<br> <br>";
 echo "Najwan Hisyam";
 echo "<br> <br>";
 ?>
-    <input type="submit" value="kembali">
-    <input type="submit" value="tampilkan data">
+    <input type="submit" value="DATA SISWA">
+    <input type="submit" value="DATA NILAI">
+    <input type="submit" value="KEMBALI">
 </body>
 </html>
